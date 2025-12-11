@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Cloud Services - Giải Pháp Đám Mây Đa Nền Tảng | E-TRUE</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* CSS Base */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Than Đá Đậm */
+            color: #EAEAEA; /* Xám Trắng */
+        }
+
+        /* Màu chủ đạo E-TRUE (Cyan Neon #66FCF1) */
+        .text-cyan-neon { color: #66FCF1; }
+        .bg-cyan-neon { background-color: #66FCF1; }
+        .border-cyan-neon { border-color: #66FCF1; }
+        
+        /* Hiệu ứng bóng phát sáng Cyan */
+        .shadow-cyan { box-shadow: 0 0 15px rgba(102, 252, 241, 0.4); }
+
+        /* Card Style (Wix Friendly) */
+        .content-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            border-color: #66FCF1; /* Hover ra màu Cyan */
+            box-shadow: 0 10px 30px -10px rgba(102, 252, 241, 0.2);
+        }
+
+        /* Nền chấm bi nhẹ (Cyan tint) */
+        .dotted-background {
+            background-image: radial-gradient(#66fcf122 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Icon Circle Container */
+        .icon-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(102, 252, 241, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(102, 252, 241, 0.2);
+            color: #66FCF1;
+            transition: all 0.3s ease;
+        }
+
+        /* Diagram Box Styles */
+        .diagram-header {
+            background: rgba(102, 252, 241, 0.1);
+            border-bottom: 1px solid rgba(102, 252, 241, 0.2);
+        }
+        .diagram-item-active {
+            background-color: #66FCF1;
+            color: #000000;
+            font-weight: 700;
+        }
+        .diagram-item-inactive {
+            background-color: #21262d;
+            color: #8b949e;
+            border: 1px solid #30363d;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-[#0d1117]/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-cyan-neon tracking-wider">E/TRUE</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-300 hover:text-cyan-neon transition-colors">Giới Thiệu</a>
+                <a href="#services" class="text-gray-300 hover:text-cyan-neon transition-colors">Dịch Vụ</a>
+                <a href="#models" class="text-gray-300 hover:text-cyan-neon transition-colors">Mô Hình</a>
+                <a href="#contact" class="px-4 py-2 border border-cyan-neon text-cyan-neon rounded-md hover:bg-cyan-neon hover:text-black transition-all">Liên Hệ</a>
+            </nav>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="py-20 md:py-32 dotted-background relative overflow-hidden">
+            <!-- Background element decoration -->
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#66fcf11a] to-transparent pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl">
+                    <span class="text-cyan-neon font-bold tracking-widest uppercase mb-2 block">Giải Pháp Đám Mây Toàn Diện</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                        Multi Cloud <span class="text-cyan-neon drop-shadow-[0_0_10px_rgba(102,252,241,0.5)]">Services</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed border-l-4 border-cyan-neon pl-6">
+                        "Với đội ngũ chuyên gia giàu kinh nghiệm, chúng tôi phân tích sâu sát hoạt động kinh doanh để tìm ra <strong>pain-points</strong> (điểm đau) của doanh nghiệp. Từ đó đánh giá, tư vấn và thiết kế riêng các giải pháp chuyển đổi lên Cloud tối ưu nhất."
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#services" class="bg-cyan-neon text-black font-bold py-3 px-8 rounded-lg transition-all hover:shadow-cyan hover:-translate-y-1">
+                            Khám Phá Dịch Vụ
+                        </a>
+                        <a href="#contact" class="border border-gray-600 text-white font-bold py-3 px-8 rounded-lg hover:border-cyan-neon hover:text-cyan-neon transition-all">
+                            Tư Vấn Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services Section -->
+        <section id="services" class="py-20 bg-[#10161d]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Dịch Vụ Cốt Lõi</h2>
+                    <p class="text-gray-400 mt-4">Chúng tôi đồng hành cùng bạn trên mọi chặng đường chuyển đổi số</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- 1. Cloud Migration -->
+                    <div class="content-card p-8 group">
+                        <div class="icon-circle group-hover:bg-cyan-neon group-hover:text-black group-hover:border-cyan-neon text-2xl">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-neon transition-colors">Cloud Migration</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">
+                            Xem xét, đánh giá và tư vấn giải pháp dịch chuyển tài nguyên, ứng dụng từ môi trường <strong>On-Premises lên Cloud</strong> một cách an toàn và phù hợp nhất.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Đánh giá hạ tầng hiện tại</li>
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Lập kế hoạch di dời</li>
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Giảm thiểu downtime</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Cloud Billing Service -->
+                    <div class="content-card p-8 group">
+                        <div class="icon-circle group-hover:bg-cyan-neon group-hover:text-black group-hover:border-cyan-neon text-2xl">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-neon transition-colors">Cloud Billing Service</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">
+                            Thay khách hàng quản lý, lập hóa đơn và thanh toán chi phí Cloud một cách <strong>thuận tiện và nhanh chóng</strong>. Tối ưu hóa dòng tiền và thủ tục hành chính.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Quản lý ngân sách</li>
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Hóa đơn tài chính hợp lệ</li>
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Báo cáo chi phí minh bạch</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Cloud Managed Service -->
+                    <div class="content-card p-8 group">
+                        <div class="icon-circle group-hover:bg-cyan-neon group-hover:text-black group-hover:border-cyan-neon text-2xl">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-neon transition-colors">Cloud Managed Service</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">
+                            Thay khách hàng <strong>giám sát và vận hành</strong> hệ thống. Chúng tôi đảm nhận các tác vụ kỹ thuật để bạn tập trung vào kinh doanh cốt lõi.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Giám sát & Cảnh báo</li>
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Sao lưu & Phục hồi (Backup)</li>
+                            <li><i class="fas fa-check text-cyan-neon mr-2"></i>Vá lỗi & Tối ưu hiệu suất</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Cloud Models Section -->
+        <section id="models" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Mô Hình Dịch Vụ</h2>
+                    <p class="text-gray-400 mt-4">Lựa chọn cấp độ quản lý phù hợp với nhu cầu của bạn</p>
+                </div>
+
+                <!-- Diagram Visualization -->
+                <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto text-center">
+                    
+                    <!-- IaaS Column -->
+                    <div class="bg-[#1c242e] border border-gray-700 rounded-lg overflow-hidden transition-all hover:border-cyan-neon">
+                        <div class="diagram-header p-4">
+                            <h3 class="text-xl font-bold text-white">IaaS</h3>
+                            <p class="text-xs text-cyan-neon opacity-80">Infrastructure as a Service</p>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="diagram-item-active p-2 rounded text-sm">Hosted Applications</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Dev Tools & DB</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Operating Systems</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Servers & Storage</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Networking & Security</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Datacenter Physical</div>
+                        </div>
+                        <div class="bg-[#0d1117] p-3 text-xs text-gray-500 border-t border-gray-800">
+                            <span class="text-cyan-neon">●</span> E-TRUE quản lý Hạ tầng
+                        </div>
+                    </div>
+
+                    <!-- PaaS Column -->
+                    <div class="bg-[#1c242e] border border-gray-700 rounded-lg overflow-hidden transition-all hover:border-cyan-neon">
+                        <div class="diagram-header p-4">
+                            <h3 class="text-xl font-bold text-white">PaaS</h3>
+                            <p class="text-xs text-cyan-neon opacity-80">Platform as a Service</p>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="diagram-item-active p-2 rounded text-sm">Hosted Applications</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Dev Tools & DB</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Operating Systems</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Servers & Storage</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Networking & Security</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Datacenter Physical</div>
+                        </div>
+                        <div class="bg-[#0d1117] p-3 text-xs text-gray-500 border-t border-gray-800">
+                            <span class="text-cyan-neon">●</span> E-TRUE quản lý Nền tảng
+                        </div>
+                    </div>
+
+                    <!-- SaaS Column -->
+                    <div class="bg-[#1c242e] border border-gray-700 rounded-lg overflow-hidden transition-all hover:border-cyan-neon">
+                        <div class="diagram-header p-4">
+                            <h3 class="text-xl font-bold text-white">SaaS</h3>
+                            <p class="text-xs text-cyan-neon opacity-80">Software as a Service</p>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Hosted Applications</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Dev Tools & DB</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Operating Systems</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Servers & Storage</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Networking & Security</div>
+                            <div class="diagram-item-inactive p-2 rounded text-sm">Datacenter Physical</div>
+                        </div>
+                        <div class="bg-[#0d1117] p-3 text-xs text-gray-500 border-t border-gray-800">
+                            <span class="text-cyan-neon">●</span> E-TRUE quản lý Toàn bộ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="py-16 bg-[#0d1117] border-y border-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <p class="text-gray-500 mb-8 uppercase tracking-widest text-sm">Đối tác & Nền tảng hỗ trợ</p>
+                <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 hover:text-cyan-neon transition-colors"><i class="fab fa-aws"></i> AWS</span>
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 hover:text-cyan-neon transition-colors"><i class="fab fa-microsoft"></i> Azure</span>
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 hover:text-cyan-neon transition-colors"><i class="fab fa-google"></i> Google Cloud</span>
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 hover:text-cyan-neon transition-colors"><i class="fas fa-database"></i> Oracle Cloud</span>
+                    <span class="text-2xl font-bold text-white flex items-center gap-2 hover:text-cyan-neon transition-colors"><i class="fas fa-server"></i> IBM Cloud</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Footer -->
+        <section id="contact" class="py-20 bg-[#10161d]">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Bắt Đầu Hành Trình Lên Mây Của Bạn</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+                    Liên hệ với chuyên gia E-TRUE để nhận tư vấn lộ trình chuyển đổi tối ưu nhất cho doanh nghiệp.
+                </p>
+                <div class="mt-8 flex flex-col md:flex-row justify-center gap-6">
+                    <a href="mailto:Sales.ict@etrue-vn.com" class="flex items-center justify-center gap-2 bg-cyan-neon text-black font-bold py-3 px-8 rounded-lg hover:shadow-cyan hover:-translate-y-1 transition-all">
+                        <i class="fas fa-envelope"></i> Sales.ict@etrue-vn.com
+                    </a>
+                    <a href="tel:+84394004568" class="flex items-center justify-center gap-2 border border-gray-600 text-white font-bold py-3 px-8 rounded-lg hover:border-cyan-neon hover:text-cyan-neon transition-all">
+                        <i class="fas fa-phone-alt"></i> +84 394 004 568
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0d1117] border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <p>&copy; 2024 E-TRUE. All Rights Reserved.</p>
+            <div class="mt-2 text-sm">
+                Địa chỉ: 1/2 Út Tịch, Phường 4, Quận Tân Bình, TP.HCM
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
